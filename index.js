@@ -1,4 +1,4 @@
-module.exports = async function(source) {
+module.exports = function(source) {
     const options = this.getOptions();
     if (options instanceof Array) {
         for (let i = 0, len = options.length; i < len; i++) {
