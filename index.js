@@ -1,8 +1,8 @@
 module.exports = function(source) {
     const options = this.getOptions();
-    if (options instanceof Array) {
-        for (let i = 0, len = options.length; i < len; i++) {
-            const one = options[i];
+    if (options.map) {
+        for (let i = 0, len = options.map.length; i < len; i++) {
+            const one = options.map[i];
             source = source.replace(one.pattern, one.replacement);
         }
     } else if (options instanceof Object) {
